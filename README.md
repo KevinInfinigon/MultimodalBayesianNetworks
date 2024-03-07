@@ -39,9 +39,11 @@ Implementation was carried out using PyTorch deep learning framework and Pyro de
 * **In order to run the demo, just execute the notebook cell by cell.** Sample images and metadata are provided in `img_sample` and `metadata_sample` respectively. However, you are welcome to test on your own samples.
 
 **NOTE:**
+
 ※ Preprocessing Steps for Skin Lesions: 
 * Capture the skin lesion with the rear camera of your smartphone. Macros lens are preferred.
 * The captured image should then be centred and cropped, resized to 300x300 pixels, and processed with gamma correction and color constancy transformation.
+
 ※ Feature Transformation for Patient Clinical Information: 
 * *Itch*, *Grew*, *Hurt*, *Changed*, *Bleed*, *Elevation*: `FALSE`:`0`, `TRUE`:`1`.
 * *Age*: `[0, 10]`:`0`, `[11, 20]`:`1`, `[21, 30]`:`2`, `[31, 40]`:`3`, `[41, 50]`:`4`, `[51, 60]`:`5`, `[61, 70]`:`6`, `[71, 80]`:`7`, `[81, 90]`:`8`, `[91, 100]`:`9`.

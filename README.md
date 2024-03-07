@@ -39,15 +39,11 @@ Implementation was carried out using PyTorch deep learning framework and Pyro de
 * **In order to run the demo, just execute the notebook cell by cell.** Sample images and metadata are provided in `img_sample` and `metadata_sample` respectively. However, you are welcome to test on your own samples.
 
 **NOTE:**
-* Preprocessing Steps for Skin Lesions: 
- ※ Capture the skin lesion with the rear camera of your smartphone. Macros lens are preferred.
-
- ※ The captured image should then be centred and cropped, resized to 300x300 pixels, and processed with gamma correction and color constancy transformation.
-* Feature Transformation for Patient Clinical Information: 
- ※ *Itch*, *Grew*, *Hurt*, *Changed*, *Bleed*, *Elevation*: `FALSE`:`0`, `TRUE`:`1`.
-
- ※ *Age*: `[0, 10]`:`0`, `[11, 20]`:`1`, `[21, 30]`:`2`, `[31, 40]`:`3`, `[41, 50]`:`4`, `[51, 60]`:`5`, `[61, 70]`:`6`, `[71, 80]`:`7`, `[81, 90]`:`8`, `[91, 100]`:`9`.
-
- ※ *Diameter*: `[0mm, 5mm]`:`0`, `[6mm, 10mm]`:`1`, `[11mm, 15mm]`:`2`, `[16mm, 20mm]`:`3`, `[21mm, 25mm]`:`4`, `[26mm, 30mm]`:`5`, `[31mm, 35mm]`:`6`, `[36mm, \infty)`:`7`.
- 
- ※ *Region/Site*: `ABDOMEN`:`0`, `ARM`:`1`, `BACK`:`2`, `CHEST`:`3`, `EAR`:`4`, `FACE`:`5`, `FOOT`:`6`, `FOREARM`:`7`, `HAND`:`8`, `LIP`:`9`, `NECK`:`10`, `11`:`NOSE`, `SCALP`:`12`, `THIGH`:`13`.
+※ Preprocessing Steps for Skin Lesions: 
+* Capture the skin lesion with the rear camera of your smartphone. Macros lens are preferred.
+* The captured image should then be centred and cropped, resized to 300x300 pixels, and processed with gamma correction and color constancy transformation.
+※ Feature Transformation for Patient Clinical Information: 
+* *Itch*, *Grew*, *Hurt*, *Changed*, *Bleed*, *Elevation*: `FALSE`:`0`, `TRUE`:`1`.
+* *Age*: `[0, 10]`:`0`, `[11, 20]`:`1`, `[21, 30]`:`2`, `[31, 40]`:`3`, `[41, 50]`:`4`, `[51, 60]`:`5`, `[61, 70]`:`6`, `[71, 80]`:`7`, `[81, 90]`:`8`, `[91, 100]`:`9`.
+* *Diameter*: `[0mm, 5mm]`:`0`, `[6mm, 10mm]`:`1`, `[11mm, 15mm]`:`2`, `[16mm, 20mm]`:`3`, `[21mm, 25mm]`:`4`, `[26mm, 30mm]`:`5`, `[31mm, 35mm]`:`6`, `[36mm, \infty)`:`7`.
+* *Region/Site*: `ABDOMEN`:`0`, `ARM`:`1`, `BACK`:`2`, `CHEST`:`3`, `EAR`:`4`, `FACE`:`5`, `FOOT`:`6`, `FOREARM`:`7`, `HAND`:`8`, `LIP`:`9`, `NECK`:`10`, `11`:`NOSE`, `SCALP`:`12`, `THIGH`:`13`.

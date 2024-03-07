@@ -7,7 +7,7 @@ Implementation was carried out using PyTorch deep learning framework and Pyro de
 * The PAD-UFES-20 dataset is available for download at: https://data.mendeley.com/datasets/zr7vgbcyr2/1.
 * The SkinCon dataset is available for download at: https://skincon-dataset.github.io/.
 
-## 2. Train, Evaluate, and Use the Models
+## 2. Train, Evaluate, and Test the Models
 `0_DatasetSplit` Folder:
 * `PAD-UFES-20_Split.csv` is the file containing the 5-fold cross-validation splits peformed on the PAD-UFES-20 dataset.
 * `SkinCon_Split.csv` is the file containing the 4:1 train-val splits peformed on the SkinCon dataset.
@@ -38,10 +38,9 @@ Implementation was carried out using PyTorch deep learning framework and Pyro de
 * `Demo.ipynb` is a notebook DEMO of our proposed *Multimodal Bayesian Network* that first reads in parameters of the EfficientNetB3 deep neural network backbone `CNN_params.pt` and parameters of the Bayesian network `BN_params.pt`, then constructs the multimodal Bayesian network.
 * **In order to run the DEMO, just execute the notebook cell by cell.** Sample images and metadata are provided in `img_sample` and `metadata_sample` respectively. However, you are welcome to test on your own samples.
 
-**※ Important Notes for the DEMO ※**
-
+## 3. Important Notes for Using the DEMO
 Preprocessing Steps for Skin Lesions: 
-* Capture the skin lesion with the rear camera of your smartphone. Macros lens are preferred.
+* Capture the skin lesion with the rear camera of your smartphone. Macro lens are preferred.
 * The captured image should then be centred and cropped, resized to 300x300 pixels, and processed with gamma correction and color constancy transformation.
 
 Feature Transformation for Patient Clinical Information: 

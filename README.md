@@ -1,13 +1,13 @@
 # Multimodal Bayesian Networks - Python Implementation
 
-**Multimodal Bayesian Networks for Automatic Skin Disease Diagnosis - Submission to MICCAI 2024**
+### Multimodal Bayesian Networks for Automatic Skin Disease Diagnosis - Submission to MICCAI 2024**
 Implementation was carried out using PyTorch deep learning framework and Pyro deep probabilistic programming framework on a single NVIDIA RTX A6000 GPU (48 GB).
 
-# 1. Download Datasets
+## 1. Download Datasets
 * The PAD-UFES-20 dataset is available for download at: https://data.mendeley.com/datasets/zr7vgbcyr2/1.
 * The SkinCon dataset is available for download at: https://skincon-dataset.github.io/.
 
-# 2. Train, Evaluate, and Use the Models
+## 2. Train, Evaluate, and Use the Models
 `0_DatasetSplit` Folder:
 * `PAD-UFES-20_Split.csv` is the file containing the 5-fold cross-validation splits peformed on the PAD-UFES-20 dataset.
 * `SkinCon_Split.csv` is the file containing the 4:1 train-val splits peformed on the SkinCon dataset.
@@ -15,7 +15,7 @@ Implementation was carried out using PyTorch deep learning framework and Pyro de
 `1_ImageOnlyDNN` Folder:
 * `PreprocessImage.ipynb` is the notebook used to resize the images, and subsequently perform gamma correction and Shades of Gray color constancy transformation.
 * `ImageOnlyDNN.ipynb` is the notebook used to train and evaluate the *Image-Only Deep Neural Network*.
-* `checkpoints` is the folder containing the parameters of the trained *Image-Only Deep Neural Networks*.
+* `checkpoints` is the folder containing the parameters of the trained *Image-Only Deep Neural Network*s.
 
 `2_MetadataOnlyBN` Folder:
 * `MetadataOnlyBN.ipynb` is the notebook used to train and evaluate the *Metadata-Only Bayesian Network*.
@@ -36,4 +36,14 @@ Implementation was carried out using PyTorch deep learning framework and Pyro de
 
 `5_Demo` Folder:
 * `Demo.ipynb` is a notebook demo of our proposed *Multimodal Bayesian Network* that first reads in parameters of the EfficientNetB3 deep neural network backbone `CNN_params.pt` and parameters of the Bayesian network `BN_params.pt`, then constructs the multimodal Bayesian network.
-* **In order to run the demo, just execute the notebook cell by cell.** Sample images and metadata are provided in `img_sample` and `metadata_sample` respectively. You are welcome to test on your own samples.
+* **In order to run the demo, just execute the notebook cell by cell.** Sample images and metadata are provided in `img_sample` and `metadata_sample` respectively. However, you are welcome to test on your own samples.
+
+**NOTE:**
+* Preprocessing Steps for Skin Lesions: 
+ ※ Capture the skin lesion with the rear camera of your smartphone. Macros lens are preferred.
+ ※ The captured image should then be centred and cropped, resized to 300x300 pixels, and processed with gamma correction and color constancy transformation.
+* Feature Transformation for Patient Clinical Information: 
+ ※ *Itch*, *Grew*, *Hurt*, *Changed*, *Bleed*, *Elevation*: `FALSE`:`0`, `TRUE`:`1`.
+ ※ *Age*: `[0, 10]`:`0`, `[11, 20]`:`1`, `[21, 30]`:`2`, `[31, 40]`:`3`, `[41, 50]`:`4`, `[51, 60]`:`5`, `[61, 70]`:`6`, `[71, 80]`:`7`, `[81, 90]`:`8`, `[91, 100]`:`9`.
+ ※ *Diameter*: `[0mm, 5mm]`:`0`, `[6mm, 10mm]`:`1`, `[11mm, 15mm]`:`2`, `[16mm, 20mm]`:`3`, `[21mm, 25mm]`:`4`, `[26mm, 30mm]`:`5`, `[31mm, 35mm]`:`6`, `[36mm, \infty)`:`7`.
+ ※ *Region/Site*: `ABDOMEN`:`0`, `ARM`:`1`, `BACK`:`2`, `CHEST`:`3`, `EAR`:`4`, `FACE`:`5`, `FOOT`:`6`, `FOREARM`:`7`, `HAND`:`8`, `LIP`:`9`, `NECK`:`10`, `11`:`NOSE`, `SCALP`:`12`, `THIGH`:`13`.

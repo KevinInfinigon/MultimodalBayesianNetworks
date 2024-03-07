@@ -35,7 +35,7 @@ Implementation was carried out using PyTorch deep learning framework and Pyro de
 * `backbones` is the folder containing the parameters of the trained EfficientNetB3s used to extract high-level clinical concepts from the skin lesion images.
 
 `5_Demo` Folder:
-* `Demo.ipynb` is a notebook DEMO of our proposed *Multimodal Bayesian Network* that first reads in parameters of the EfficientNetB3 deep neural network backbone `CNN_params.pt` and parameters of the Bayesian network `BN_params.pt`, then constructs the multimodal Bayesian network.
+* `Demo.ipynb` is a **CPU** notebook DEMO of our proposed *Multimodal Bayesian Network* that first reads in parameters of the EfficientNetB3 deep neural network backbone `CNN_params.pt` and parameters of the Bayesian network `BN_params.pt`, then constructs the multimodal Bayesian network.
 * **In order to run the DEMO, just execute the notebook cell by cell.** Sample images and metadata are provided in `img_sample` and `metadata_sample` respectively. However, you are welcome to test on your own samples.
 
 ## 3. Important Notes for Using the DEMO

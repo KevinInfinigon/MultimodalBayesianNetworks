@@ -1,6 +1,6 @@
 # Multimodal Bayesian Networks - Python Implementation
 
-### Multimodal Bayesian Networks for Automatic Skin Disease Diagnosis - Submission to MICCAI 2024
+### Multimodal Bayesian Networks for Automatic Skin Disease Diagnosis
 Implementation was carried out using PyTorch deep learning framework and Pyro deep probabilistic programming framework on a single NVIDIA RTX A6000 GPU (48 GB).
 
 ## 1. Download Datasets

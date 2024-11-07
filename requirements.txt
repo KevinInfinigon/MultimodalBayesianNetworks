@@ -9,6 +9,6 @@ pandas==2.1.4
 pillow==10.2.0
 pyro-ppl==1.8.4
 timm==0.6.12
-torch==2.0.1
+torch==2.2.0
 torchmetrics==0.6.0
 tqdm==4.66.2
